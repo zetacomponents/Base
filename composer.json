@@ -41,10 +41,7 @@
     "license": "Apache-2.0",
     "name": "zetacomponents/base",
     "type": "library",
-        "require": {
-            "zetacomponents/base": "*"
-        },
-        "require-dev": {
-            "zetacomponents/unit-test": "*"
-        }
+    "require-dev": {
+        "zetacomponents/unit-test": "*"
+    }
 }
