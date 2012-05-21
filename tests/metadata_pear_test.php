@@ -29,6 +29,11 @@
  */
 class ezcBaseMetaDataPearTest extends ezcTestCase
 {
+    public function setUp()
+    {
+        $this->markTestSkipped('Only work when Zeta Components is installed as pear package.');
+    }
+
     public static function testConstruct()
     {
         $r = new ezcBaseMetaData( 'pear' );
