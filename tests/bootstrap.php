@@ -12,3 +12,15 @@ phpunit
 EOT
        );
 }
+
+function ezc_autoload( $className )
+{
+    if ( strpos( $className, '_' ) === false )
+    {
+        ezcBase::autoload( $className );
+    }
+}
+
+spl_autoload_register( 'ezc_autoload' );
+
+ezcBase::setWorkingDirectory(__DIR__);
