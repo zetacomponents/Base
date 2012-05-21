@@ -1,0 +1,20 @@
+{
+    "hash": "aec1ed7cb478d2fba5dfc7bfa5c2dcca",
+    "packages": [
+
+    ],
+    "packages-dev": [
+        {
+            "package": "zetacomponents/unit-test",
+            "version": "dev-master",
+            "source-reference": "6d117e709ad5ade03a5cd395bcc80adb7fee68fc"
+        }
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": [
+
+    ]
+}
