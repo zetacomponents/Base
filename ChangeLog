@@ -1,3 +1,19 @@
+1.9 - Friday 12 September 2014
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Adjusted source headers of Base to Apache license.
+- Updated: Moving copyright information to NOTICE files.
+- Use ezc_autoload() instead of __autoload(). (tests)
+- Use assertInternalType() instead of assertType() where appropriate. (tests)
+- Use assertInstanceOf() instead of assertType(). (tests)
+- Fixed #ZETACOMP-39: ezcBaseOptions implements Iterator.
+- Fixed #ZETACOMP-59: ezcBaseFileFindRecursiveTest::testRecursive1|2|4() now work.
+- Fixed #ZETACOMP-33: Many dead links (404).
+- Remove custom test runner.
+- Fix ezcBaseTest.
+- Added composer.json and test dependencies.
+- Added Travis configuration.
+
 1.8 - Monday 21 December 2009
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
