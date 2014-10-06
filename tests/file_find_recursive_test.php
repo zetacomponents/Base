@@ -83,18 +83,17 @@ class ezcBaseFileFindRecursiveTest extends ezcTestCase
             1 => 'vendor/zetacomponents/unit-test/ChangeLog',
             2 => 'vendor/zetacomponents/unit-test/NOTICE',
             3 => 'vendor/zetacomponents/unit-test/composer.json',
-            4 => 'vendor/zetacomponents/unit-test/composer.lock',
-            5 => 'vendor/zetacomponents/unit-test/design/class_diagram.png',
-            6 => 'vendor/zetacomponents/unit-test/src/constraint/image.php',
-            7 => 'vendor/zetacomponents/unit-test/src/regression_suite.php',
-            8 => 'vendor/zetacomponents/unit-test/src/regression_test.php',
-            9 => 'vendor/zetacomponents/unit-test/src/test/case.php',
-            10 => 'vendor/zetacomponents/unit-test/src/test/image_case.php',
-            11 => 'vendor/zetacomponents/unit-test/src/test_autoload.php',
+            4 => 'vendor/zetacomponents/unit-test/design/class_diagram.png',
+            5 => 'vendor/zetacomponents/unit-test/src/constraint/image.php',
+            6 => 'vendor/zetacomponents/unit-test/src/regression_suite.php',
+            7 => 'vendor/zetacomponents/unit-test/src/regression_test.php',
+            8 => 'vendor/zetacomponents/unit-test/src/test/case.php',
+            9 => 'vendor/zetacomponents/unit-test/src/test/image_case.php',
+            10 => 'vendor/zetacomponents/unit-test/src/test_autoload.php',
         );
 
         self::assertEquals( $expected, ezcBaseFile::findRecursive( "vendor/zetacomponents/unit-test", array( '@^vendor/zetacomponents/unit-test/@' ), array( '@/docs/@', '@\.git@', '@\.swp$@' ), $stats ) );
-        self::assertEquals( array( 'size' => 191117, 'count' => 12 ), $stats );
+        self::assertEquals( array( 'size' => 191012, 'count' => 11 ), $stats );
     }
 
     public function testRecursive3()
