@@ -424,8 +424,8 @@ class ezcBaseTest extends ezcTestCase
     public function testNoPrefixAutoload()
     {
         ezcBase::addClassRepository( __DIR__ . '/test_repository', __DIR__ . '/test_repository/autoload_files' );
-        ezc_autoload( 'Object' );
-        if ( !class_exists( 'Object' ) )
+        ezc_autoload( 'Objet' );
+        if ( !class_exists( 'Objet' ) )
         {
             $this->fail( "Autoload does not handle classes with no prefix" );
         }
