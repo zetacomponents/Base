@@ -43,14 +43,5 @@ else
     die( "Your environment isn't properly set-up. Please refer to the eZ components documentation at http://components.ez.no/doc ." );
 }
 
-/**
- * Implements the __autoload mechanism for PHP - which can only be done once
- * per request.
- *
- * @param string $className  The name of the class that should be loaded.
- */
-function __autoload( $className )
-{
-	ezcBase::autoload( $className );
-}
+spl_autoload_register( [ 'ezcBase', 'autoload' ] );
 ?>

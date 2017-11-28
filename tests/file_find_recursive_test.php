@@ -73,7 +73,7 @@ class ezcBaseFileFindRecursiveTest extends ezcTestCase
 
         $files = ezcBaseFile::findRecursive( "src", array(), array( '@/docs/@', '@svn@', '@\.swp$@', '@git@' ), $stats );
         self::assertEquals( $expected, $files );
-        self::assertEquals( array( 'size' => 134176, 'count' => 35 ), $stats );
+        self::assertEquals( array( 'size' => 133978, 'count' => 35 ), $stats );
     }
 
     public function testRecursive2()
