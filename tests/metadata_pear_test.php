@@ -92,7 +92,7 @@ class ezcBaseMetaDataPearTest extends ezcTestCase
 
     public static function suite()
     {
-        return new PHPUnit_Framework_TestSuite( 'ezcBaseMetaDataPearTest' );
+        return new PHPUnit\Framework\TestSuite( 'ezcBaseMetaDataPearTest' );
     }
 }
 ?>

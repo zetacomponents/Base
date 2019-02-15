@@ -103,7 +103,7 @@ class ezcBaseFileCalculateRelativePathTest extends ezcTestCase
 
     public static function suite()
     {
-         return new PHPUnit_Framework_TestSuite( "ezcBaseFileCalculateRelativePathTest" );
+         return new PHPUnit\Framework\TestSuite( "ezcBaseFileCalculateRelativePathTest" );
     }
 }
 ?>
