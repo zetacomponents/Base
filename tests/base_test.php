@@ -449,7 +449,7 @@ class ezcBaseTest extends ezcTestCase
 
     public function testInvalidClass()
     {
-        $this->setExpectedException( 'ezcBaseAutoloadException', "Could not find a class to file mapping for 'ezcNoSuchClass'. Searched for no_such_autoload.php, no_autoload.php, autoload.php in:" );
+        $this->expectException( 'ezcBaseAutoloadException', "Could not find a class to file mapping for 'ezcNoSuchClass'. Searched for no_such_autoload.php, no_autoload.php, autoload.php in:" );
         self::assertEquals( false, class_exists( 'ezcNoSuchClass', true ) );
     }
 
@@ -539,7 +539,7 @@ class ezcBaseTest extends ezcTestCase
 
     public static function suite()
     {
-        return new PHPUnit_Framework_TestSuite("ezcBaseTest");
+        return new PHPUnit\Framework\TestSuite("ezcBaseTest");
     }
 }
 ?>
