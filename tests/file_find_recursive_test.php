@@ -93,7 +93,7 @@ class ezcBaseFileFindRecursiveTest extends ezcTestCase
         );
 
         self::assertEquals( $expected, ezcBaseFile::findRecursive( "vendor/zetacomponents/unit-test", array( '@^vendor/zetacomponents/unit-test/@' ), array( '@/docs/@', '@\.git@', '@\.swp$@' ), $stats ) );
-        self::assertEquals( array( 'size' => 191012, 'count' => 11 ), $stats );
+        self::assertEquals( 11, $stats['count'] );
     }
 
     public function testRecursive3()
