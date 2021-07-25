@@ -8,9 +8,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -31,7 +31,7 @@
  */
 class ezcBaseFileCopyRecursiveTest extends ezcTestCase
 {
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->tempDir = $this->createTempDir( __CLASS__ );
         mkdir( $this->tempDir . '/dir1' );
@@ -63,7 +63,7 @@ class ezcBaseFileCopyRecursiveTest extends ezcTestCase
         chmod( $this->tempDir . '/dir6', 0400 );
     }
 
-    protected function tearDown()
+    protected function tearDown() : void
     {
         chmod( $this->tempDir . '/dir5', 0700 );
         chmod( $this->tempDir . '/dir6', 0700 );
@@ -72,14 +72,14 @@ class ezcBaseFileCopyRecursiveTest extends ezcTestCase
 
     public function testRecursiveCopyEmptyDir()
     {
-        ezcBaseFile::copyRecursive( 
+        ezcBaseFile::copyRecursive(
             $this->tempDir . '/dir1',
             $this->tempDir . '/dest'
         );
 
-        $this->assertEquals( 
+        $this->assertEquals(
             count( ezcBaseFile::findRecursive( $this->tempDir . '/dir1' ) ),
-            count( ezcBaseFile::findRecursive( $this->tempDir . '/dest' ) ) 
+            count( ezcBaseFile::findRecursive( $this->tempDir . '/dest' ) )
         );
 
         $this->assertSame(
@@ -91,7 +91,7 @@ class ezcBaseFileCopyRecursiveTest extends ezcTestCase
 
     public function testRecursiveCopyFile()
     {
-        ezcBaseFile::copyRecursive( 
+        ezcBaseFile::copyRecursive(
             $this->tempDir . '/dir1/file1.txt',
             $this->tempDir . '/dest'
         );
@@ -109,7 +109,7 @@ class ezcBaseFileCopyRecursiveTest extends ezcTestCase
 
     public function testRecursiveCopyEmptyDirMode()
     {
-        ezcBaseFile::copyRecursive( 
+        ezcBaseFile::copyRecursive(
             $this->tempDir . '/dir1',
             $this->tempDir . '/dest',
             -1,
@@ -117,9 +117,9 @@ class ezcBaseFileCopyRecursiveTest extends ezcTestCase
             0777
         );
 
-        $this->assertEquals( 
+        $this->assertEquals(
             count( ezcBaseFile::findRecursive( $this->tempDir . '/dir1' ) ),
-            count( ezcBaseFile::findRecursive( $this->tempDir . '/dest' ) ) 
+            count( ezcBaseFile::findRecursive( $this->tempDir . '/dest' ) )
         );
 
         $this->assertSame(
@@ -131,7 +131,7 @@ class ezcBaseFileCopyRecursiveTest extends ezcTestCase
 
     public function testRecursiveCopyFileMode()
     {
-        ezcBaseFile::copyRecursive( 
+        ezcBaseFile::copyRecursive(
             $this->tempDir . '/dir1/file1.txt',
             $this->tempDir . '/dest',
             -1,
@@ -152,28 +152,28 @@ class ezcBaseFileCopyRecursiveTest extends ezcTestCase
 
     public function testRecursiveCopyFullDir()
     {
-        ezcBaseFile::copyRecursive( 
+        ezcBaseFile::copyRecursive(
             $this->tempDir . '/dir2',
             $this->tempDir . '/dest'
         );
 
-        $this->assertEquals( 
+        $this->assertEquals(
             count( ezcBaseFile::findRecursive( $this->tempDir . '/dir2' ) ),
-            count( ezcBaseFile::findRecursive( $this->tempDir . '/dest' ) ) 
+            count( ezcBaseFile::findRecursive( $this->tempDir . '/dest' ) )
         );
     }
 
     public function testRecursiveCopyFullDirDepthZero()
     {
-        ezcBaseFile::copyRecursive( 
+        ezcBaseFile::copyRecursive(
             $this->tempDir . '/dir2',
             $this->tempDir . '/dest',
             0
         );
 
-        $this->assertEquals( 
+        $this->assertEquals(
             0,
-            count( ezcBaseFile::findRecursive( $this->tempDir . '/dest' ) ) 
+            count( ezcBaseFile::findRecursive( $this->tempDir . '/dest' ) )
         );
 
         $this->assertTrue(
@@ -183,15 +183,15 @@ class ezcBaseFileCopyRecursiveTest extends ezcTestCase
 
     public function testRecursiveCopyFullDirLimitedDepth()
     {
-        ezcBaseFile::copyRecursive( 
+        ezcBaseFile::copyRecursive(
             $this->tempDir . '/dir2',
             $this->tempDir . '/dest',
             2
         );
 
-        $this->assertEquals( 
+        $this->assertEquals(
             3,
-            count( ezcBaseFile::findRecursive( $this->tempDir . '/dest' ) ) 
+            count( ezcBaseFile::findRecursive( $this->tempDir . '/dest' ) )
         );
     }
 
@@ -199,7 +199,7 @@ class ezcBaseFileCopyRecursiveTest extends ezcTestCase
     {
         try
         {
-            ezcBaseFile::copyRecursive( 
+            ezcBaseFile::copyRecursive(
                 $this->tempDir . '/not_existing',
                 $this->tempDir . '/dest'
             );
@@ -214,7 +214,7 @@ class ezcBaseFileCopyRecursiveTest extends ezcTestCase
 
     public function testRecursiveCopyFailureNotReadable()
     {
-        ezcBaseFile::copyRecursive( 
+        ezcBaseFile::copyRecursive(
             $this->tempDir . '/dir5',
             $this->tempDir . '/dest'
         );
@@ -232,7 +232,7 @@ class ezcBaseFileCopyRecursiveTest extends ezcTestCase
     {
         try
         {
-            ezcBaseFile::copyRecursive( 
+            ezcBaseFile::copyRecursive(
                 $this->tempDir . '/dir2',
                 $this->tempDir . '/dir4'
             );
@@ -252,14 +252,14 @@ class ezcBaseFileCopyRecursiveTest extends ezcTestCase
 
     public function testRecursiveCopyDirCalled0()
     {
-        ezcBaseFile::copyRecursive( 
+        ezcBaseFile::copyRecursive(
             $this->tempDir . '/dir7',
             $this->tempDir . '/dest'
         );
 
-        $this->assertEquals( 
+        $this->assertEquals(
             count( ezcBaseFile::findRecursive( $this->tempDir . '/dir7' ) ),
-            count( ezcBaseFile::findRecursive( $this->tempDir . '/dest' ) ) 
+            count( ezcBaseFile::findRecursive( $this->tempDir . '/dest' ) )
         );
 
         $this->assertTrue( is_dir( $this->tempDir . '/dest/0' ) );

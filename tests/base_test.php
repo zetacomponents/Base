@@ -8,9 +8,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -310,18 +310,18 @@ class ezcBaseTest extends ezcTestCase
             $this->assertEquals( "The autoload directory file './wrongAutoloadDir' could not be found.", $e->getMessage() );
         }
     }
-    
+
     public function testBaseAddAndGetAutoloadDirs1()
     {
         ezcBase::addClassRepository( __DIR__ );
         $resultArray = ezcBase::getRepositoryDirectories();
 
-        if ( count( $resultArray ) != 2 ) 
+        if ( count( $resultArray ) != 2 )
         {
             $this->fail( "Duplicating or missing extra autoload dirs while adding." );
         }
 
-        if ( !isset( $resultArray['ezc'] ) ) 
+        if ( !isset( $resultArray['ezc'] ) )
         {
            $this->fail( "No packageDir found in result of getRepositoryDirectories()" );
         }
@@ -523,14 +523,14 @@ class ezcBaseTest extends ezcTestCase
         self::assertEquals( 'custom', ezcBase::getInstallMethod() );
     }
 
-    public function setup()
+    public function setUp() : void
     {
         $options = new ezcBaseAutoloadOptions;
         $options->debug = true;
         ezcBase::setOptions( $options );
     }
 
-    public function teardown()
+    public function tearDown() : void
     {
         $options = new ezcBaseAutoloadOptions;
         $options->debug = true;

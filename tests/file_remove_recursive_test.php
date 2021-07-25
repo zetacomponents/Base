@@ -8,9 +8,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -31,7 +31,7 @@
  */
 class ezcBaseFileRemoveRecursiveTest extends ezcTestCase
 {
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->tempDir = $this->createTempDir( 'ezcBaseFileRemoveFileRecursiveTest' );
         mkdir( $this->tempDir . '/dir1' );
@@ -71,7 +71,7 @@ class ezcBaseFileRemoveRecursiveTest extends ezcTestCase
         chmod( $this->tempDir . '/dir8/dir1', 0500 );
     }
 
-    protected function tearDown()
+    protected function tearDown() : void
     {
         chmod( $this->tempDir . '/dir5', 0700 );
         chmod( $this->tempDir . '/dir6', 0700 );
