@@ -1,3 +1,9 @@
+1.9.3 - Sunday 25 July 2021
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- PHP 8.1 compatibility, by adding the ReturnTypeWillChange attribute to
+  ezcBaseOptions.
+
 1.9.2 - Sunday 25 July 2021
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
