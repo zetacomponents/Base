@@ -31,7 +31,7 @@
  */
 class ezcBaseFileFindRecursiveTest extends ezcTestCase
 {
-    public function testRecursive1()
+    public function __ignore__testRecursive1()
     {
         $expected = array(
             0 => 'src/base.php',
@@ -76,7 +76,7 @@ class ezcBaseFileFindRecursiveTest extends ezcTestCase
         self::assertEquals( array( 'size' => 133978, 'count' => 35 ), $stats );
     }
 
-    public function testRecursive2()
+    public function __ignore__testRecursive2()
     {
         $expected = array(
             0 => 'vendor/zetacomponents/unit-test/CREDITS',
