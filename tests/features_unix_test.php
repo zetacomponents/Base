@@ -68,21 +68,37 @@ class ezcBaseFeaturesUnixTest extends ezcTestCase
 
     public function testHasImageConvert()
     {
+        if (!ezcBaseFeatures::findExecutableInPath('convert')) {
+            $this->markTestSkipped();
+        }
+
         $this->assertEquals( true, ezcBaseFeatures::hasImageConvert() );
     }
 
     public function testGetImageConvertExecutable()
     {
+        if (!ezcBaseFeatures::findExecutableInPath('convert')) {
+            $this->markTestSkipped();
+        }
+
         $this->assertEquals( '/usr/bin/convert', ezcBaseFeatures::getImageConvertExecutable() );
     }
 
     public function testGetImageIdentifyExecutable()
     {
+        if (!ezcBaseFeatures::findExecutableInPath('identify')) {
+            $this->markTestSkipped();
+        }
+
         $this->assertEquals( '/usr/bin/identify', ezcBaseFeatures::getImageIdentifyExecutable() );
     }
 
     public function testHasImageIdentify()
     {
+        if (!ezcBaseFeatures::findExecutableInPath('identify')) {
+            $this->markTestSkipped();
+        }
+
         $this->assertEquals( true, ezcBaseFeatures::hasImageIdentify() );
     }
 
