@@ -68,7 +68,8 @@ class ezcBaseFeaturesUnixTest extends ezcTestCase
 
     public function testHasImageConvert()
     {
-        if (!ezcBaseFeatures::findExecutableInPath('convert')) {
+        if ( !ezcBaseFeatures::findExecutableInPath( 'convert' ) )
+        {
             $this->markTestSkipped();
         }
 
@@ -77,7 +78,8 @@ class ezcBaseFeaturesUnixTest extends ezcTestCase
 
     public function testGetImageConvertExecutable()
     {
-        if (!ezcBaseFeatures::findExecutableInPath('convert')) {
+        if ( !ezcBaseFeatures::findExecutableInPath( 'convert' ) )
+        {
             $this->markTestSkipped();
         }
 
@@ -86,7 +88,8 @@ class ezcBaseFeaturesUnixTest extends ezcTestCase
 
     public function testGetImageIdentifyExecutable()
     {
-        if (!ezcBaseFeatures::findExecutableInPath('identify')) {
+        if ( !ezcBaseFeatures::findExecutableInPath( 'identify') )
+        {
             $this->markTestSkipped();
         }
 
@@ -95,7 +98,8 @@ class ezcBaseFeaturesUnixTest extends ezcTestCase
 
     public function testHasImageIdentify()
     {
-        if (!ezcBaseFeatures::findExecutableInPath('identify')) {
+        if ( !ezcBaseFeatures::findExecutableInPath( 'identify' ) )
+        {
             $this->markTestSkipped();
         }
 
