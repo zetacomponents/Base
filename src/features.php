@@ -185,7 +185,7 @@ class ezcBaseFeatures
         {
             return extension_loaded( $extension );
         }
-        return extension_loaded( $extension ) && version_compare( phpversion( $extension ), $version, ">=" ) ;
+        return extension_loaded( $extension ) && version_compare( phpversion( $extension ), $version, ">=" );
     }
 
     /**
