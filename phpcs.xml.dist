@@ -11,7 +11,6 @@
     <config name="php_version" value="70200"/>
 
     <file>src</file>
-    <file>tests</file>
 
     <rule ref="ZetaComponents" />
 </ruleset>

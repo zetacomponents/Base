@@ -295,7 +295,7 @@ class ezcBase
         {
             $array = require( "$autoloadDir$fileName" );
 
-            if ( is_array( $array) && array_key_exists( $className, $array ) )
+            if ( is_array( $array ) && array_key_exists( $className, $array ) )
             {
                 // Add the array to the cache, and include the requested file.
                 ezcBase::$autoloadArray = array_merge( ezcBase::$autoloadArray, $array );
