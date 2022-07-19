@@ -42,9 +42,9 @@
     "name": "zetacomponents/base",
     "type": "library",
     "require-dev": {
-        "phpunit/phpunit": "~8.0",
+        "phpunit/phpunit": "~9.0",
         "phpunit/php-invoker": "^2.0|^3.1",
-        "zetacomponents/unit-test": "1.1.5",
+        "zetacomponents/unit-test": "1.2.3",
         "zetacomponents/coding-standard": "dev-main"
     },
     "config": {
