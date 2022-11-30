@@ -31,6 +31,8 @@
  */
 class ezcBaseFileCopyRecursiveTest extends ezcTestCase
 {
+    protected $tempDir;
+
     protected function setUp() : void
     {
         $this->tempDir = $this->createTempDir( __CLASS__ );

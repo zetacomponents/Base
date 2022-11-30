@@ -31,6 +31,8 @@
  */
 class ezcBaseFileRemoveRecursiveTest extends ezcTestCase
 {
+    protected $tempDir;
+
     protected function setUp() : void
     {
         $this->tempDir = $this->createTempDir( 'ezcBaseFileRemoveFileRecursiveTest' );
