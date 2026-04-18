@@ -30,6 +30,7 @@
  * @package Base
  * @version //autogentag//
  */
+#[AllowDynamicProperties]
 abstract class ezcBaseOptions implements ArrayAccess, Iterator
 {
     /**
