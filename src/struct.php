@@ -30,6 +30,7 @@
  * @package Base
  * @version //autogentag//
  */
+#[AllowDynamicProperties]
 class ezcBaseStruct
 {
     /**
